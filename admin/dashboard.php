@@ -354,10 +354,14 @@
         <h5 class="fw-bold footer-title">Kategori</h5>
         <hr class="footer-divider mt-0">
         <ul class="list-unstyled small">
-          <li><a href="#" class="footer-link">Era Digital</a></li>
-          <li><a href="#" class="footer-link">Nilai Pancasila</a></li>
-          <li><a href="#" class="footer-link">Tantangan</a></li>
-          <li><a href="#" class="footer-link">Solusi & Upaya</a></li>
+          <li><a href="#" class="footer-link">Politik</a></li>
+          <li><a href="#" class="footer-link">Sosial</a></li>
+          <li><a href="#" class="footer-link">Olahraga</a></li>
+          <li><a href="#" class="footer-link">Hiburan</a></li>
+          <li><a href="#" class="footer-link">Teknologi</a></li>
+          <li><a href="#" class="footer-link">Kesehatan & Kecantikan</a></li>
+          <li><a href="#" class="footer-link">Pendidikan</a></li>
+          <li><a href="#" class="footer-link">Lifestyle</a></li>
         </ul>
       </div>
 
@@ -370,7 +374,7 @@
         </div>
         <div class="contact-item">
           <i class="fas fa-envelope me-2"></i>
-          <a href="mailto:panera@gmail.com" class="footer-link">panera@gmail.com</a>
+          <a href="mailto:panera@gmail.com" class="footer-link">sora@gmail.com</a>
         </div>
         <div class="contact-item">
           <i class="fas fa-phone me-2"></i> +62 812 3456 7890
@@ -380,9 +384,9 @@
 
     <!-- Sosial Media -->
     <div class="text-center pb-3">
-      <a href="#" class="footer-link social-icon"><i class="fab fa-github"></i></a>
-      <a href="#" class="footer-link social-icon"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="footer-link social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/nurlizaazz" class="footer-link social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://www.x.com/nurlizaazz" class="footer-link social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/nurlizaazz" class="footer-link social-icon"><i class="fab fa-instagram"></i></a>
     </div>
 
     <!-- Copyright -->

@@ -88,14 +88,18 @@
       </div>
 
       <!-- Kategori -->
-      <div class="col-md-3 mb-2">
+     <div class="col-md-3 mb-2">
         <h5 class="fw-bold footer-title">Kategori</h5>
         <hr class="footer-divider mt-0">
         <ul class="list-unstyled small">
-          <li><a href="#" class="footer-link">Era Digital</a></li>
-          <li><a href="#" class="footer-link">Nilai Pancasila</a></li>
-          <li><a href="#" class="footer-link">Tantangan</a></li>
-          <li><a href="#" class="footer-link">Solusi & Upaya</a></li>
+          <li><a href="#" class="footer-link">Politik</a></li>
+          <li><a href="#" class="footer-link">Sosial</a></li>
+          <li><a href="#" class="footer-link">Olahraga</a></li>
+          <li><a href="#" class="footer-link">Hiburan</a></li>
+          <li><a href="#" class="footer-link">Teknologi</a></li>
+          <li><a href="#" class="footer-link">Kesehatan & Kecantikan</a></li>
+          <li><a href="#" class="footer-link">Pendidikan</a></li>
+          <li><a href="#" class="footer-link">Lifestyle</a></li>
         </ul>
       </div>
 
