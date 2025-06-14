@@ -1,75 +1,66 @@
 <style>
-  .bg-blue-theme {
-    background: linear-gradient(135deg, #2196F3 0%, #64B5F6 50%, #1E88E5 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
-  }
+.custom-footer {
+  background-color: #3F51B5;
+  padding-top: 30px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
 
-  .bg-blue-theme::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #BBDEFB 0%, #64B5F6 50%, #1565C0 100%);
-  }
+.footer-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  font-size: 1.1rem;
+}
 
-  .footer-link {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-  }
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background-color: white;
+  margin-left: 0;
+}
 
-  .footer-link:hover {
-    color: #E3F2FD;
-    transform: translateY(-2px);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
 
-  .social-icon {
-    font-size: 1.4rem;
-    margin: 0 8px;
-    transition: all 0.3s ease;
-  }
+.footer-link:hover {
+  color: #E3F2FD;
+  transform: translateY(-2px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  .social-icon:hover {
-    transform: scale(1.15) translateY(-2px);
-    color: #E3F2FD;
-  }
+.social-icon {
+  font-size: 1.4rem;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
 
-  .contact-item {
-    margin-bottom: 8px;
-    padding-left: 6px;
-    border-left: 2px solid rgba(255,255,255,0.3);
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-  }
+.social-icon:hover {
+  transform: scale(1.15) translateY(-2px);
+  color: #E3F2FD;
+}
 
-  .contact-item:hover {
-    border-left: 2px solid white;
-    padding-left: 10px;
-  }
+.contact-item {
+  margin-bottom: 8px;
+  padding-left: 6px;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
 
-  .footer-title {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 4px;
-    font-size: 1.1rem;
-  }
+.contact-item:hover {
+  border-left: 2px solid white;
+  padding-left: 10px;
+}
 
-  .footer-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background: white;
-  }
-
+.copyright-note {
+  font-size: 0.95rem;
+}
   .footer-wave {
     position: absolute;
     bottom: 0;
@@ -81,56 +72,70 @@
   }
 </style>
 
-<footer class="bg-blue-theme text-white py-3 mt-auto position-relative">
-  <div class="footer-wave"></div>
-  <div class="container position-relative">
+<footer class="custom-footer text-white">
+  <div class="container">
     <div class="row">
-      <div class="col-lg-4 mb-3">
-        <h5 class="footer-title">BungaBuzz</h5>
-        <p class="small">Portal berita terkini yang menyajikan informasi aktual, terpercaya, dan inspiratif dari berbagai bidang.</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="index.php" class="btn btn-outline-light btn-sm rounded-pill">Beranda</a>
-          <a href="index.php" class="btn btn-outline-light btn-sm rounded-pill">Artikel</a>
-          <a href="tentang.php" class="btn btn-outline-light btn-sm rounded-pill">Tentang</a>
-        </div>
+      <!-- Logo -->
+      <div class="col-md-3 mb-2 text-end">
+        <img src="./uploads/SORA.png" alt="Logo PANERA" class="img-fluid" width="90" height="90">
       </div>
 
-      <div class="col-lg-4 mb-3">
-        <h5 class="footer-title">Kontak</h5>
-        <div class="contact-item">
-          <i class="bi bi-envelope me-2"></i>
-          <a href="mailto:bungaalyamukhbita@gmail.com" class="footer-link">bungaalyamukhbita@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <i class="bi bi-instagram me-2"></i>
-          <a href="https://www.instagram.com/bngalya_" target="_blank" class="footer-link">@bngalya_</a>
-        </div>
-        <div class="contact-item">
-          <i class="bi bi-geo-alt me-2"></i>
-          <span>Medan, Sumatera Utara</span>
-        </div>
+      <!-- Deskripsi -->
+      <div class="col-md-3 mb-2">
+        <h5 class="fw-bold footer-title">SORA</h5>
+        <hr class="footer-divider mt-0">
+        <p class="small">Update berita terkini yang akurat, kredibel, dan penuh inspirasi dari berbagai tempat.</p>
       </div>
 
-      <div class="col-lg-4">
-        <h5 class="footer-title">Ikuti Saya</h5>
-        <div class="d-flex">
-          <a href="https://www.instagram.com/bngalya_" class="footer-link social-icon"><i class="bi bi-instagram"></i></a>
-          <a href="https://github.com/Buwnbun17" class="footer-link social-icon"><i class="bi bi-github"></i></a>
+      <!-- Kategori -->
+      <div class="col-md-3 mb-2">
+        <h5 class="fw-bold footer-title">Kategori</h5>
+        <hr class="footer-divider mt-0">
+        <ul class="list-unstyled small">
+          <li><a href="#" class="footer-link">Era Digital</a></li>
+          <li><a href="#" class="footer-link">Nilai Pancasila</a></li>
+          <li><a href="#" class="footer-link">Tantangan</a></li>
+          <li><a href="#" class="footer-link">Solusi & Upaya</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontak -->
+      <div class="col-md-3 mb-2">
+        <h5 class="fw-bold footer-title">Kontak</h5>
+        <hr class="footer-divider mt-0">
+        <div class="contact-item">
+          <i class="fas fa-home me-2"></i> Medan, Indonesia
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope me-2"></i>
+          <a href="" class="footer-link">sora@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone me-2"></i> +62 812 3456 7890
         </div>
       </div>
     </div>
 
-    <hr class="my-3" style="border-color: rgba(255,255,255,0.2);">
+    <!-- Sosial Media -->
+    <div class="text-center pb-3">
+      <a href="https://www.instagram.com/nurlizaazz" class="footer-link social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://www.x.com/nurlizaazz" class="footer-link social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/nurlizaazz" class="footer-link social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
 
-    <div class="text-center small">
-      <p class="mb-0">&copy; 2025 <strong>BungaBuzz</strong>. All rights reserved. | 
-        <a href="#" class="footer-link">Kebijakan Privasi</a> | 
-        <a href="#" class="footer-link">Syarat & Ketentuan</a>
-      </p>
+    <!-- Copyright -->
+    <div class="text-center pt-2 border-top border-light copyright-note">
+      © 2025 <strong>SORA</strong>. All rights reserved. |
+      <a href="#" class="footer-link">Kebijakan Privasi</a> |
+      <a href="#" class="footer-link">Syarat & Ketentuan</a>
     </div>
   </div>
 </footer>
 
+
+
+
 <!-- Bootstrap Icons & JS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

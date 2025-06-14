@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $judul = trim($_POST['judul']);
   $isi = trim($_POST['isi']);
   $id_kategori = (int)$_POST['id_kategori'];
+  $tagar = trim($_POST['tagar']);
   $tanggal = $_POST['tanggal'];
   $slug = slugify($judul);
 
@@ -18,8 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $target = "../uploads/" . $gambar;
 
     if (move_uploaded_file($tmp, $target)) {
-      $stmt = $conn->prepare("INSERT INTO berita (judul, isi, id_kategori, tanggal, gambar, slug) VALUES (?, ?, ?, ?, ?, ?)");
-      $stmt->bind_param("ssisss", $judul, $isi, $id_kategori, $tanggal, $gambar, $slug);
+      $stmt = $conn->prepare("INSERT INTO berita (judul, isi, id_kategori, tagar, tanggal, gambar, slug) VALUES (?, ?, ?, ?, ?, ?, ?)");
+      $stmt->bind_param("ssissss", $judul, $isi, $id_kategori, $tagar, $tanggal, $gambar, $slug);
 
       if ($stmt->execute()) {
         header("Location: dashboard.php");

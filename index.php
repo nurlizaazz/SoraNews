@@ -1,59 +1,61 @@
 <?php include 'inc/header.php'; include 'db/config.php'; ?>
 
 <style>
-  :root {
-    --warna-biru-utama: #0D47A1; /* Biru dongker */
-    --warna-biru-hover: #08306b; /* Biru lebih gelap untuk hover */
-    --warna-link: #1565C0;       /* Biru link */
-  }
-
   .card-header.tema-biru {
-    background-color: var(--warna-biru-utama);
-    color: white; 
-  }
+    background-color: #E8EAF6;
+    color: #3F51B5;
+    font-weight: bold; 
+  } 
 
   .card-body h5 a {
-    color: var(--warna-link);
+    color: #512DA8;
+    font-weight: bold;
     text-decoration: none; 
   }
   .card-body h5 a:hover {
-    color: var(--warna-biru-hover); 
+    color: #303F9F; 
   }
 
   .kategori .list-group-item {
-    color: var(--warna-link);
+    color:  #5C6BC0;
   }
   .kategori .list-group-item:hover {
-    background-color: #E3F2FD; 
-    color: var(--warna-biru-hover);
+    background-color: #DEE5F2;
+    color: #303F9F;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
   }
 
   .hot-news-link a {
-    color: var(--warna-link) !important; 
+    color: #5C6BC0 !important; 
     text-decoration: none;
   }
   .hot-news-link a:hover {
-    color: var(--warna-biru-hover) !important;
+    color: #303F9F !important;
   }
 
   .pagination .page-link {
-    color: var(--warna-biru-utama);
-  }
-  .pagination .page-link:hover {
-    background-color: var(--warna-biru-utama);
-    color: white;
-  }
-  .pagination .page-item.active .page-link {
-    background-color: var(--warna-biru-utama);
-    border-color: var(--warna-biru-hover);
-    color: white;
-  }
+  color:  #3F51B5;
+  border: 1px solid #ddd;
+}
+
+.pagination .page-link:hover {
+  background-color: #3F51B5;
+  color: white;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #3F51B5;
+  color: #fff;
+  border-color: #303F9F;
+}
 </style>
 
 <div class="container mt-4">
   <div class="row">
+
     <div class="col-md-3">
-      <div class="card kategori">
+      <div class="card kategori mb-4">
         <div class="card-header fw-bold tema-biru">Kategori</div>
         <ul class="list-group list-group-flush">
         <?php
@@ -64,7 +66,26 @@
         ?>
         </ul>
       </div>
+
+      <div class="card kategori">
+        <div class="card-header fw-bold tema-biru">Tagar</div>
+        <ul class="list-group list-group-flush">
+        <?php
+        $berita = $conn->query("SELECT tagar, slug FROM berita ORDER BY tanggal DESC");
+        while($b = $berita->fetch_assoc()) {
+          $tagars = explode(',', $b['tagar']);
+          foreach ($tagars as $tag) {
+            $tag = trim($tag);
+            if ($tag !== '') {
+              echo '<a href="detail.php?slug=' . $b['slug'] . '" class="list-group-item">#' . ltrim($tag, '#') . '</a>';
+            }
+          }
+        }
+        ?>
+        </ul>
+      </div>
     </div>
+
     <div class="col-md-6">
       <?php
       $batas = 5;
@@ -76,7 +97,7 @@
                 <img src='uploads/{$b['gambar']}' class='card-img-top'>
                 <div class='card-body'>
                   <h5><a href='detail.php?slug={$b['slug']}'>{$b['judul']}</a></h5>
-                  <small class='text-muted'>Dipublikasikan: {$b['tanggal']}</small>
+                  <small class='text-muted'>{$b['tanggal']}</small>
                   <p class='mt-2'>".substr(strip_tags($b['isi']),0,150)."...</p>
                 </div>
               </div>";
@@ -112,6 +133,8 @@
         </ul>
       </div>
     </div>
+  </div>
+</div>
   </div>
 </div>
 

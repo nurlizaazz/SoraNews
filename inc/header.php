@@ -84,7 +84,7 @@
 .nav-link {
   padding: 8px 16px;
   text-decoration: none;
-  color: #4B5563 !important;
+  color: #5C6BC0 !important;
   font-weight: 500;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
@@ -92,12 +92,12 @@
 
 .nav-link:hover {
   background-color: #DBEAFE;
-  color: #1D4ED8 !important;
+  color: #1A237E !important;
 }
 
 .nav-link:not(.active):hover {
-  background-color: #E3F2FD !important;
-  color: black !important;
+  background-color: white !important;
+  color: #1A237E !important;
 }
 
 .nav-link.active {
